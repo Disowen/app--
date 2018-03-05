@@ -10,7 +10,7 @@ if($data) {
 }else{
 	return Response::show(400, '首页数据获取失败', $data);
 }
-exit;
+
 require_once('./db.php');
 require_once('./file.php');
 $page = isset($_GET['page']) ? $_GET['page'] : 1;

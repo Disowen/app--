@@ -94,7 +94,7 @@ class Response {
 				$attr = " id='{$key}'";
 				$key = "item";
 			}
-			$xml .= "<{$key}><{$attr}>";
+			$xml .= "<{$key}{$attr}>";
 			$xml .= is_array($value) ? self::xmlToEncode($value) : $value;
 			$xml .= "</{$key}>\n";
 		}
@@ -103,5 +103,4 @@ class Response {
 
 }
 
-Response::xmlEncode(200,"CG",array(4,5,6));
 ?>
